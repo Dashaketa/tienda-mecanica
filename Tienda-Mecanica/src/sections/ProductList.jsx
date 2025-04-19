@@ -1,4 +1,4 @@
-import Product from './Product';
+import Product from './sections./Product';
 
 function ProductList({ products, emptyHeading }) {
   const count = products.length;
