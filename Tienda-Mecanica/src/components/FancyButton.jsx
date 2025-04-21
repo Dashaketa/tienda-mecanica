@@ -1,14 +1,12 @@
-// src/components/FancyButton.jsx
 export default function FancyButton({ href, children }) {
-    return (
-      <a
-        href={href}
-        className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400"
-      >
-        <span className="relative px-6 py-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
-          {children}
-        </span>
-      </a>
-    );
-  }
+  return (
+    <a
+      href={href}
+      className="relative inline-flex items-center justify-center px-6 py-3 font-medium text-white bg-white/10 border border-white/20 backdrop-blur-md rounded-xl shadow-md hover:shadow-[0_0_30px_rgba(253,224,71,0.4)] transition duration-300 ease-in-out hover:scale-105"
+    >
+      {children}
+    </a>
+  );
+}
+
   

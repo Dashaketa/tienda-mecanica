@@ -6,10 +6,9 @@ export default function Hero() {
       <h2 className="text-4xl font-bold text-vite mb-4">
         Bienvenido a Tienda Mecánica
       </h2>
-      <p className="text-yellow-300 text-lg mb-6">
+      <p className="text-yellow-200 text-lg mb-6">
         Encuentra los repuestos que tu vehículo necesita
       </p>
-      <FancyButton href="#productos">Ver productos</FancyButton>
 
     </header>
   );
