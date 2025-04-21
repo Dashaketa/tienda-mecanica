@@ -31,8 +31,8 @@ export default function AboutUs() {
   function AboutCard({ title, description }) {
     return (
       <div className="p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(250,204,21,0.4)] transition-transform">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-sm opacity-80 leading-relaxed">{description}</p>
+        <h3 className=" text-emerald-300 text-xl font-semibold mb-2">{title}</h3>
+        <p className=" text-sm opacity-80 leading-relaxed">{description}</p>
       </div>
     );
   }
