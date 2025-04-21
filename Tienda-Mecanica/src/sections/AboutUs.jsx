@@ -4,7 +4,7 @@ export default function AboutUs() {
     return (
       <section className="relative z-10 px-16 py-16 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className=" text-green-300 text-4xl sm:text-5xl font-bold mb-6">¿Quiénes somos?</h1>
+          <h1 className=" text-green-300 text-4xl sm:text-5xl font-extrabold mb-6">¿Quiénes Somos?</h1>
           <h3 className="text-lg sm:text-xl opacity-80 leading-relaxed mb-12">
             Somos una empresa comprometida con entregar soluciones innovadoras en el área automotriz. Nos mueve la pasión por la tecnología, el buen servicio y las relaciones duraderas con nuestros clientes.
           </h3>
@@ -27,12 +27,13 @@ export default function AboutUs() {
       </section>
     );
   }
-  
   function AboutCard({ title, description }) {
     return (
-        <div className="p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-[0_0_20px_20px_rgba(134,239,172,0.4)] hover:scale-[1.05] transition-all duration-1000">
-        <h3 className=" text-emerald-300 text-xl font-semibold mb-2">{title}</h3>
-        <p className=" text-sm opacity-80 leading-relaxed">{description}</p>
+      <div className="p-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md hover:shadow-[0_0_50px_rgba(134,239,172,0.4)] transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] group">
+        <div>
+          <h3 className="text-emerald-300 text-xl font-bold mb-2">{title}</h3>
+          <p className="text-sm opacity-80 leading-relaxed">{description}</p>
+        </div>
       </div>
     );
   }

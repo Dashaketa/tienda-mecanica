@@ -22,7 +22,7 @@ const info = [
 export default function CompanyInfoSection() {
     return (
         <section className="p-12 md:p-20 bg-black/10 text-white">
-        <h2 className="  text-yellow-200    text-3xl font-bold text-center mb-12">¿Por qué elegirnos?</h2>
+        <h2 className="  text-yellow-200    text-3xl font-bold text-center mb-12">¿Por qué Elegirnos?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-1 max-w-5xl mx-auto items-center justify-items-center">
         {info.map((item, i) => (
             <CompanyCard key={i} title={item.title} description={item.description} />
