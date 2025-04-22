@@ -1,15 +1,18 @@
-import FancyButton from "../components/FancyButton";
+import '/Users/sebastianlopez/Documents/Duoc/5to Semestre/tienda/Tienda-Mecanica/src/styles/titulos.css';
+
 
 export default function Hero() {
   return (
-    <header className="bg-transparent text-center py-3 px-4">
-      <h2 className="text-white/80 text-4xl font-bold text-vite mb-4">
-        Bienvenido a Tienda Mecánica
-      </h2>
-      <p className="text-white/80 text-lg mb-6">
-        Encuentra los repuestos que tu vehículo necesita
-      </p>
-
+    <header className="relative bg-transparent text-center py-16 px-4">
+      <div className="mx-auto max-w-4xl">
+        {/* Título principal */}
+        <div className=" bg-transparent p-1 inline-block rounded-lg">
+         <h1 className='titulo-principal'>Bienvenido a Tienda Mecanica</h1>
+          <p className="mt-4 text-2xl font-semibold text-white/80">
+  Tu Aliado Automotriz         
+         </p>
+        </div>
+      </div>
     </header>
   );
 }

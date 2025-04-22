@@ -1,0 +1,29 @@
+/* Gradiente animado profesional */
+.titulo-principal {
+    font-size: 3rem; /* 48px */
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, #6b21a8 0%, #d97706 50%, #6b21a8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 5s linear infinite;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }
+  
+  /* Efecto hover avanzado */
+  .titulo-principal:hover {
+    animation: shine 1s linear infinite, pulse 2s ease infinite;
+ 
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+  }

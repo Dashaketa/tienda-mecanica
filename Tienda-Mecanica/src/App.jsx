@@ -17,7 +17,7 @@ export default function App() {
     <div className="relative min-h-screen text-white">
     <Background />
     <Navbar />
-   <Hero/>
+   <Hero/>  
    <CompanyInfoSection/>
    <AboutUs/>
    <CarruselMarcas/>
