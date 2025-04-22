@@ -18,6 +18,15 @@ const brands = [
   { src: '/logos/Renault_2021.svg', alt: 'Renault' },
   { src: '/logos/Toyota_carlogo.svg', alt: 'Toyota' },
   { src: '/logos/Volkswagen_logo_2019.svg', alt: 'Volkswagen' },
+  { src: '/logos/Acura.svg', alt: 'Acura' },
+  { src: '/logos/Chery.svg', alt: 'Chery' },
+  { src: '/logos/Infiniti.svg', alt: 'Infiniti' },
+  { src: '/logos/Jeep.svg', alt: 'Jeep' },
+  { src: '/logos/Lexus.svg', alt: 'Lexus' },
+  { src: '/logos/Mazda.svg', alt: 'Mazda' },
+  { src: '/logos/Mitsubishi.svg', alt: 'Mitsubishi' },
+  { src: '/logos/Subaru.svg', alt: 'Subaru' },
+  { src: '/logos/Suzuki.svg', alt: 'Suzuki' },
 ];
 
 
