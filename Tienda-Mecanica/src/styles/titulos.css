@@ -3,12 +3,12 @@
     font-size: 3rem; /* 48px */
     font-weight: 800;
     text-align: center;
-    background: linear-gradient(90deg, #6b21a8 0%, #d97706 50%, #6b21a8 100%);
+    background: linear-gradient(90deg, #ff0000 0%, #000000 50%, #ff0000 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: shine 5s linear infinite;
+    animation: shine 8s linear infinite;
     display: inline-block;
     margin-bottom: 1rem;
   }

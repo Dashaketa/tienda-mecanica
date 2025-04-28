@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import '/Users/sebastianlopez/Documents/Duoc/5to Semestre/tienda/Tienda-Mecanica/src/styles/cards.css'; // Cambié a ruta relativa
+import { useEffect, useState } from 'react';
 
-
-
-// Los logos en tu proyecto
 const brands = [
   { src: '/logos/Audi.svg', alt: 'Audi' },
   { src: '/logos/BMW.svg', alt: 'BMW' },
@@ -29,88 +28,97 @@ const brands = [
   { src: '/logos/Suzuki.svg', alt: 'Suzuki' },
 ];
 
+const colorPalette = [
+  'shadow-yellow-300',
+  'shadow-green-400',
+  'shadow-pink-500',
+  'shadow-purple-400',
+  'shadow-blue-400',
+  'shadow-cyan-400'
+];
 
 export default function BrandCarousel() {
-    return (
-      <div className="relative py-24 min-h-[500px] overflow-hidden">
-        
-        {/* === FONDO RADIAL ORIGINAL (exacto al que me pasaste) === */}
-  
-        {/* === CONTENIDO OPTIMIZADO === */}
-        <div className="relative z-10 container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-white mb-16">
+  const [colors, setColors] = useState([]);
+
+  useEffect(() => {
+    const initialColors = brands.map(() => 
+      colorPalette[Math.floor(Math.random() * colorPalette.length)]
+    );
+    setColors(initialColors);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setColors(prev => prev.map(() => 
+        colorPalette[Math.floor(Math.random() * colorPalette.length)]
+      ));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative py-16 bg-transparent w-full overflow-hidden"> {/* Cambio clave aquí */}
+      <div className="container mx-auto px-4 w-full">
+        <h2 className="text-4xl font-bold text-center mb-12 mx-auto max-w-lg">
+          <span className="titulo-carrusel">
             Marcas que confían en nosotros
-          </h2>
-  
-          {/* Fila Superior (→) */}
-          <div className="mb-12">
-            <Swiper
-              modules={[Autoplay]}
-              slidesPerView="auto"
-              spaceBetween={40}
-              autoplay={{ delay: 0, disableOnInteraction: false }}
-              speed={7000}
-              loop
-              className="!overflow-visible"
-            >
-              {[...brands, ...brands].map((logo, i) => (
-                <SwiperSlide key={`top-${i}`} className="!w-[180px]">
-                  <div className="bg-white/90 backdrop-blur-sm p-5 rounded-xl border border-white/10
-                       transition-all duration-300 hover:shadow-md">
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt} 
-                      className="h-10 w-full object-contain"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-  
-          {/* Fila Inferior (←) */}
-          <div className="mt-12">
-            <Swiper
-              modules={[Autoplay]}
-              slidesPerView="auto"
-              spaceBetween={40}
-              autoplay={{ 
-                delay: 0, 
-                disableOnInteraction: false,
-                reverseDirection: true 
-              }}
-              speed={7000}
-              loop
-              className="!overflow-visible"
-            >
-              {[...brands, ...brands].reverse().map((logo, i) => (
-                <SwiperSlide key={`bottom-${i}`} className="!w-[180px]">
-                  <div className="bg-white/90 backdrop-blur-sm p-5 rounded-xl border border-white/10
-                       transition-all duration-300 hover:shadow-md">
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt} 
-                      className="h-10 w-full object-contain"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          </span>
+        </h2>
+
+        {/* Fila Superior - Contenedor adicional */}
+        <div className="w-full relative">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={30}
+            autoplay={{ delay: 0, disableOnInteraction: false }}
+            speed={8000}
+            loop
+            className="swiper-container" /* Clase modificada */
+          >
+            {brands.map((logo, i) => (
+              <SwiperSlide key={`top-${i}`} className="!w-[180px]">
+                <div className={`p-5 rounded-xl bg-white transition-all duration-500 ${colors[i]}`}>
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className="h-10 w-full object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Fila Inferior - Contenedor adicional */}
+        <div className="w-full relative mt-8">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={30}
+            autoplay={{ 
+              delay: 0, 
+              disableOnInteraction: false,
+              reverseDirection: true 
+            }}
+            speed={8000}
+            loop
+            className="swiper-container" /* Clase modificada */
+          >
+            {[...brands].reverse().map((logo, i) => (
+              <SwiperSlide key={`bottom-${i}`} className="!w-[180px]">
+                <div className={`p-5 rounded-xl bg-white transition-all duration-500 ${colors[i]}`}>
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className="h-10 w-full object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
-
-                
-
-    );
-
-
-      <section className="p-6 relative z-10">
-          <h2 className="text-3xl font-bold text-center">{heading}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-            {products.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </section>
-  }
+    </div>
+  );
+}

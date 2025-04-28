@@ -1,0 +1,34 @@
+/* Prevenir scroll horizontal */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedor del carrusel */
+  .swiper-container {
+    width: 100%;
+    padding: 0 1px; /* Pequeño ajuste para evitar overflow */
+  }
+  
+  /* Efectos de sombra (manteniendo tus estilos) */
+  .shadow-yellow-300 { box-shadow: 0 8px 25px -5px rgba(252, 211, 77, 0.4); }
+  /* ... mantener el resto de tus sombras ... */
+  
+  /* Título (manteniendo tu estilo exacto) */
+  .titulo-carrusel {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, #33ff00 0%, #06b9d9 50%, #33ff00 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 5s linear infinite;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }

@@ -7,8 +7,8 @@ export default function Hero() {
       <div className="mx-auto max-w-4xl">
         {/* Título principal */}
         <div className=" bg-transparent p-1 inline-block rounded-lg">
-         <h1 className='titulo-principal'>Bienvenido a Tienda Mecanica</h1>
-          <p className="mt-4 text-2xl font-semibold text-white/80">
+         <h1 className='titulo-principal'>Bienvenido a AutoParts</h1>
+          <p className="mt-4 text-2xl font-semibold text-black/70">
   Tu Aliado Automotriz         
          </p>
         </div>
